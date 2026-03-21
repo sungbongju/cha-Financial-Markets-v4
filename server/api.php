@@ -16,7 +16,8 @@ $allowed_origins = array(
     'http://localhost:3000',
     'http://127.0.0.1:8080',
     'https://cha-financial-markets.vercel.app',
-    'https://cha-financial-markets-v2.vercel.app'
+    'https://cha-financial-markets-v2.vercel.app',
+    'https://cha-financial-markets-v4.vercel.app'
 );
 $origin = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : '';
 if (in_array($origin, $allowed_origins)) {
