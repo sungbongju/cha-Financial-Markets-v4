@@ -2188,7 +2188,7 @@ function ftfSendCommand(eventType, data) {
   try {
     const cmd = data ? { event_type: eventType, ...data } : { event_type: eventType };
     const encoded = new TextEncoder().encode(JSON.stringify(cmd));
-    ftfRoom.localParticipant.publishData(encoded, { topic: 'agent-control' });
+    ftfRoom.localParticipant.publishData(encoded, { reliable: true, topic: 'agent-control' });
     console.log('[FTF] Command:', eventType, data || '');
   } catch (e) {
     console.error('[FTF] Command error:', eventType, e);
