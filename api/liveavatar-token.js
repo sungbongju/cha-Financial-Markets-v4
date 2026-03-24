@@ -48,11 +48,9 @@ export default async function handler(req, res) {
         avatar_persona: {
           language: "ko",
           voice_settings: {
+            voice_id: body.voice_id || "b2bd6569-a537-4342-aeca-a1f15d2a2c97",
             model: "eleven_flash_v2_5",
             speed: 1.0,
-          },
-          stt_config: {
-            provider: "deepgram",
           },
         },
         interactivity_type: "CONVERSATIONAL",

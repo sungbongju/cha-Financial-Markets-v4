@@ -2398,7 +2398,7 @@ async function startFTF() {
     const tokenRes = await fetch('/api/liveavatar-token', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ avatar_id: AVATAR_CONFIG.avatarId })
+      body: JSON.stringify({ avatar_id: AVATAR_CONFIG.avatarId, voice_id: AVATAR_CONFIG.voiceId })
     });
     const tokenData = await tokenRes.json();
     if (!tokenRes.ok || !tokenData.session_id) {
